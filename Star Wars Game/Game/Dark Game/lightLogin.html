@@ -1,0 +1,177 @@
+<html class="skrollr skrollr-desktop"><head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Question Game Center</title>
+
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+  <!-- Icon -->
+  <link rel="icon" type="image/png" href="images/icon.png">
+  
+
+  <!-- Bootstrap -->
+  <link rel="stylesheet" type="text/css" href="bootstrap/bootstrap.min.css">
+
+  <!-- FontAwesome -->
+  <link rel="stylesheet" type="text/css" href="youplay/js/font-awesome.min.css">
+
+
+  <!-- youplay -->
+
+  <link rel="stylesheet" type="text/css" href="youplay/css/youplay-light.min.css">
+  <!--[if lt IE 9]>
+      <script src="../assets/plugins/html5shiv/html5shiv.min.js"></script>
+    <![endif]-->
+    
+<script src="js/jquery-1.9.1.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.validate.js"></script>
+
+<link href="style/toastr.min.css" rel="stylesheet">
+<script src="js/toastr.min.js"></script>
+    
+    
+</head>
+
+<body>
+
+  <!-- Preloader -->
+  <div class="page-preloader preloader-wrapp" style="display: none;">
+    
+    
+  </div>
+  <!-- /Preloader -->
+
+  <!-- Navbar -->
+  <nav class="navbar-youplay navbar navbar-default navbar-fixed-top " style="background-color: #FFF8DC;">
+    <div class="container">
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="off-canvas" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a class="navbar-brand" href="index.html">
+          <img src="images/logo-dark.png" alt="" style="margin-top: 20px;">
+        </a>
+          <a class="navbar-brand" href="index.html" style="margin-top: 20px;">
+        LIGHT SIDE
+      </a>
+      </div>
+      <div id="navbar" class="navbar-collapse collapse">
+        
+      </div>
+    </div>
+  </nav>
+  <!-- /Navbar -->
+
+
+
+<!-- Footer -->
+<footer>
+    <!-- Social Buttons -->
+    <div class="social">
+      <div class="container" data-bottom-top="opacity: 0;" data-bottom="opacity: 1;">
+        <h3>Lest Game Begin</h3>
+ 
+        <div class="row icons">
+          <div class="col-md-3">
+            
+              
+              <div class="container align-center">
+            <div class="youplay-form" style="margin-right: 500px;">
+              <h2>Login</h2>
+
+              <form>
+                <div class="youplay-input">
+                  <input type="text" id="login" name="login" placeholder="Name">
+                </div>
+                  
+                  
+                  <label for="sel1">Select Team:</label>
+                  <select class="youplay-input" id="sel1">
+                    <option value="Team">-- Team --</option>
+                    <option value="NBQ">NBQ</option>
+                    <option value="MMB RACE">MMB RACE</option>
+                    <option value="Non-Stop Services">Non-Stop Services</option>
+                    <option value="HP Education">HP Education</option>
+                    <option value="ECO">ECO</option>
+                    <option value="Fixed Care Packs">Fixed Care Packs</option>
+                    <option value="ROPS">ROPS</option>
+                    <option value="Web Invoicing">Web Invoicing</option>
+                    <option value="PWC">PWC</option>
+                    <option value="PROP">PROP</option>
+                    <option value="Services 360">Services 360</option>
+                  </select>
+                  
+                <div class="youplay-input">
+                  
+                </div>
+                <!--<input type="submit" class="btn btn-default db" id="submit" value="Sign In">-->
+                <button class="btn btn-default db" id="submit">Login</button>
+              </form>
+            </div>
+          </div>
+              
+        
+            </div>
+        </div>
+ 
+      </div>
+    </div>
+    <!-- /Social Buttons -->
+ 
+    <!-- Copyright -->
+    <div class="copyright" style="background-color: #FFF8DC;">
+      <div class="container">
+        <strong>EAST</strong> © 2015. All rights reserved
+      </div>
+    </div>
+    <!-- /Copyright -->
+
+  </div>
+</footer>
+<!-- /Footer -->
+    
+    
+
+    
+    <script>
+    
+    /*$('#submit').click(function(){
+        $('#loginForm').validate({
+            rules:{
+                login:{
+                    required:true,
+                }
+            },
+            messages:{
+                login:{
+                    required: "Name is required field",
+                }
+            }
+        });
+    });*/
+        
+    $('#submit').click(function(e){
+        e.preventDefault();
+        var name = $('#login').val();
+        var team = $('#sel1').select().val();
+        
+        if(name == "" || team == "Team"){
+            toastr.error("Name and Team are required");
+        }else{
+            window.location.href = "light.html";
+        }
+        
+
+    });
+    
+    
+    </script>
+    
+</body>
+</html>
